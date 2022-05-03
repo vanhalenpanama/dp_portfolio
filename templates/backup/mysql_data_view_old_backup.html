@@ -1,0 +1,16 @@
+{% include 'header.html' %}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+<!--<h1> 맨체스터 유나이티드 2016/2017 시즌</h1>-->
+<!--{{man_data2016|safe}}-->
+                <div class="container-fluid">
+{% if leng == 0 %}
+<h1> mysql DB에서 조회되는 백업 데이터가 없습니다. </h1>
+{% else %}
+<h1> mysql 백업 데이터 </h1>
+{{data|safe}}
+{% endif %}
+                </div>
+                <!-- /.container-fluid -->
+{% include 'footer.html' %}

@@ -1,0 +1,16 @@
+{% include 'header.html' %}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+
+                <div class="container-fluid">
+
+<!--<h3>{{session.loginid}}님의 정보</h3>-->
+<form action="/editmatch_form" method="post">
+  index:<input type="text" name="idex" value="{{res.indexes}}" readonly><br/>
+  index:<input type="text" name="idex" value="{{res.indexes}}"><br/>
+<input type="submit" value="백업 데이터 수정">
+</form>
+                    </div>
+                <!-- /.container-fluid -->
+{% include 'footer.html' %}

@@ -1,0 +1,67 @@
+{% include 'header.html' %}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">mysql 백업 데이터 수정</h1>
+<!--                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.-->
+<!--                        For more information about DataTables, please visit the <a target="_blank"-->
+<!--                            href="https://datatables.net">official DataTables documentation</a>.</p>-->
+
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+<!--                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>-->
+<!--                            <h6 class="m-0 font-weight-bold text-primary"></h6>-->
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<!--                                    <thead>-->
+<!--                                        <tr>-->
+<!--                                            <th>Name</th>-->
+<!--                                            <th>Position</th>-->
+<!--                                            <th>Office</th>-->
+<!--                                            <th>Age</th>-->
+<!--                                            <th>Start date</th>-->
+<!--                                            <th>Salary</th>-->
+<!--                                        </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tfoot>-->
+<!--                                        <tr>-->
+<!--                                            <th>Name</th>-->
+<!--                                            <th>Position</th>-->
+<!--                                            <th>Office</th>-->
+<!--                                            <th>Age</th>-->
+<!--                                            <th>Start date</th>-->
+<!--                                            <th>Salary</th>-->
+<!--                                        </tr>-->
+<form action="/editmatch_form" method="post">
+  index:<input type="text" name="idex" value="{{res.indexes}}" readonly><br/>
+  Date:<input type="text" name="Date" value="{{res.Date}}" readonly><br/>
+  Time:<input type="text" name="Time" value="{{res.Time}}"><br/>
+  Comp:<input type="text" name="Comp" value="{{res.Comp}}"><br/>
+  Round:<input type="text" name="Round" value="{{res.Round}}"><br/>
+  Day:<input type="text" name="Day" value="{{res.Day}}"><br/>
+  Venue:<input type="text" name="Venue" value="{{res.Venue}}"><br/>
+  Result:<input type="text" name="Result" value="{{res.Result}}"><br/>
+  GF:<input type="text" name="GF" value="{{res.GF}}"><br/>
+  GA:<input type="text" name="GA" value="{{res.GA}}"><br/>
+  Opponent:<input type="text" name="Opponent" value="{{res.Opponent}}"><br/>
+<input type="submit" value="수정">
+</form>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <div class="container-fluid">
+                    </div>
+                <!-- /.container-fluid -->
+{% include 'footer.html' %}

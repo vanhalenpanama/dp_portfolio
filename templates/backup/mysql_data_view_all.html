@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+
+                <div class="container-fluid">
+{% if leng == 0 %}
+<h1> mysql DB에서 조회되는 백업 데이터가 없습니다. </h1>
+{% else %}
+<h1> mysql 백업 데이터 (전체 건수 : {{leng}} ) </h1><br>
+<table border="1">
+    <tr><th>index</th><th>Date</th><th>Time</th><th>Comp</th><th>Round</th><th>Day</th><th>Venue</th><th>Result</th><th>GF</th><th>GA</th><th>Opponent</th></tr>
+{% for b in res %}
+<tr>
+<!--    <td><a href="/bus/stationinfo/{{b.busid}}">{{b.busid}}</a></td>-->
+<!--    <td>{{b.busnm}}</td><td>{{b.ststat}}</td><td>{{b.edstat}}</td>-->
+<!--    <td>{{b.sttime}}</td><td>{{b.edtime}}</td><td>{{b.term}}</td>-->
+    <td><a href="/{{b.indexes}}">{{b.indexes}}</a></td>
+    <td><a href="/{{b.indexes}}">{{b.Date}}</a></td><td>{{b.Time}}
+    </td><td>{{b.Comp}}</td><td>{{b.Round}}</td><td>{{b.Day}}</td><td>{{b.Venue}}</td>
+    <td>{{b.Result}}</td><td>{{b.GF}}</td><td>{{b.GA}}</td><td>{{b.Opponent}}</td>
+</tr>
+{% endfor %}
+    </table>
+{% endif %}
+                </div>
+                <!-- /.container-fluid -->
+{% include 'footer.html' %}

@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+<form action="expect" method="post">
+    대전 상대 팀의 검색 코드를 입력하세요 : <input type="text" name="team">
+    <input type="submit" value="검색"><br><br>
+{{team_list|safe}}
+                </div>
+                <!-- /.container-fluid -->
+{% include 'footer.html' %}
